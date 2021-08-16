@@ -10,7 +10,6 @@ class User(db.Model):
 	password = db.Column(db.String(80))
 	role = db.Column(db.String(80))
 
-	product = db.relationship('Product', lazy='dynamic')
 	cart = db.relationship('Cart', lazy='dynamic')
 
 	def __init__(self, email: str, username: str, password: str) -> None:
